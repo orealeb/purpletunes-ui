@@ -1,0 +1,38 @@
+<div class="nav-level">
+  <div class="nav-level-layout wrapper">
+    <div class="PageTabs">
+      <a class="page-section-tab active" href="/">Trending</a>
+      <a class="page-section-tab " href="/explore/new">New</a>
+      <a class="page-section-tab " href="/explore/popular">Most popular</a>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div class="wrapper feed-list">
+<div class>
+  <div class="feed-card product-card top-card">
+    <div class="card-header">
+      <div class="buy-button-container">
+        <a href="http://www.amazon.com/dp/B01EBVNCAS/?tag=tfe-canopy-20" data-source="Product Card"  target="_blank" rel="nofollow" class="card-buy-button"><i class="icon-check price-icon"></i><span class="price">$15</span></a>
+      </div>
+    </div>
+    <a href="/product/36373?from_shop=the-fresh-exchange" class="product-card-body fancybox fancybox-wide fancybox.ajax product-link-tracking" data-product-id="36373" data-product-name="T4U 2.5 Inch Ceramic Flowing glaze solid Gray Base Serial (3 Shape )Set succulent Plant Pot/Cactus Plant Pot Flower Pot/Container/Planter Package 1 Pack of 6" data-source="Product Card"><div class="card-body"><div class="product-card-image"><img src="https://res.cloudinary.com/hcu8jcnmr/image/upload/c_fit,w_600,h_600/vqjhns1a0dcgt9t1su0b.jpg" class=""></div><div class="product-card-details"><div class="product-details-name"><span class="text-underline">T4U 2.5 Inch Ceramic Flowing glaze solid Gray Base Serial (3 Shape )Set succulent Plant Pot/Cactus Plant Pot Flower Pot/Container/Planter Package 1 Pack of 6</span></div><div class="product-details-brand"><span><span>by </span><!-- react-text: 22 --> <!-- /react-text --><!-- react-text: 23 -->T4U888<!-- /react-text --></span></div></div></div></a>
+<div class="card-footer"><div class="feed-card-footer"><div class="footer-left-side trending-content"><svg class="trending-footer-icon" width="18" height="27" viewBox="0 0 18 24"><image id="Layer_0" data-name="Layer 0" width="18" height="24" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAbCAMAAABGHy+tAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC3dmhyAAAAEXRSTlMABBkfCh0XAhEGCAwTEBsVDrAU5nQAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAfElEQVQoz2WQWxKEIAwElTEbFV/3P61oqHIym88uugkMg874BwqETIZfAj4D5kyWAmBlUq2RmaWtARSVYKNIwCQSh0JKoT0IKOT9VOWHRRwLrxDMmNV+AT3Qj2D7h/pip6t3af2geOx18t9tIkWIpQgl6Q0l6QllqY1IbW5HkwOuMaCNHQAAAABJRU5ErkJggg=="></image></svg><span>Trending</span><!-- react-text: 30 --> <!-- /react-text --></div><div class="user-actions"><div class="like-action"><div class="like-action-inner"><a class="like-action-link"><i class="like-action-icon icon-heart"></i><div class="like-action-number">5</div></a></div></div><div class="collect-action"><a class="collect-action-icon icon-collect"></a></div></div></div></div>
+  </div>
+</div>
+
+</div>
+
+
+
+<h3>Top Heroes</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let hero of heroes" [routerLink]="['/detail', hero.id]" class="col-1-4">
+    <div class="module hero">
+      <h4>{{hero.name}}</h4>
+    </div>
+  </a>
+</div>

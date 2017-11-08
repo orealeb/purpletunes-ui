@@ -1,0 +1,142 @@
+<div>
+  <div flex class="wrapper">
+    <mat-toolbar style="margin-left: 9%;">
+      <div class="pageTabs">
+      <a class="page-section-tab" routerLink="/trending"> Trending</a>
+      <a class="page-section-tab" routerLink="/new"> New</a>
+      <a class="page-section-tab" routerLink="/mostpopular"> Most Popular</a>
+      </div>
+    </mat-toolbar>
+  </div>
+
+  <div class="wrapper" flex style="margin-top:-3%; width:70% !important;">
+    <mat-grid-list cols="3" class="card-row" rowHeight="350">
+      <mat-grid-tile colspan="1" *ngFor="let article of articles" >
+        <mat-card class="feed-card" style="max-height:230px !important; max-width:230px !important;" (click)="openDialog()">
+          <div style="position:relative;" style="width:230px !important;">
+            <img mat-card-image src="{{article.image}}" alt="Photo of a Shiba Inu">
+            <div class="music-link">
+              <div style="margin-top:15%;">
+                <a href="LINK">
+                  <i class="fa fa-spotify" aria-hidden="true"></i>
+                </a>
+                <a href="LINK">
+                  <i class="fa fa-soundcloud" aria-hidden="true"></i>
+                </a>
+                <a href="LINK">
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <mat-card-content>
+            <p>
+              {{article.title}}
+            </p>
+          </mat-card-content>
+          <div class="bottom-card-div" style="font-size:13px;">
+            <hr>
+            <div class="footer-left-side trending-content" style="width: 70%; float: left;">
+              <i class="fa fa-bolt" aria-hidden="true"></i>
+              <span>Trending</span>
+            </div>
+            <div class="user-actions" style="float: right;max-width: 105px;">
+              <a>
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                <span class="like-action-number">5</span>
+              </a>
+              <a>
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </mat-card>
+      </mat-grid-tile>
+
+      <!-- <mat-grid-tile colspan="1">
+        <mat-card class="feed-card">
+          <div style="position:relative;" style="width:300px !important;">  
+
+          <img mat-card-image src="http://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+             <div class="music-link"><a href="LINK" ><? echo $title ?></a></div>
+          </div>
+          <mat-card-content>
+            <p>
+              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            </p>
+          </mat-card-content>
+          <hr>
+          <div style="    height: 30px; margin: 14px 0 14px 0;     color: #888888; font-size: 14px;">
+            <div class="footer-left-side trending-content" style="width: 70%; float: left;">
+              <mat-icon class="md-24" aria-label="thunder icon">flash_on</mat-icon>
+              <span>Trending</span>
+            </div>
+            <div class="user-actions" style="float: right;max-width: 105px;">
+              <a>
+                <mat-icon class="md-24" aria-label="heart icon">thumb_up</mat-icon>
+                <span class="like-action-number">5</span>
+              </a>
+              <a>
+                <mat-icon class="md-24" aria-label="plus icon">add_circle_outline</mat-icon>
+              </a>
+            </div>
+          </div>
+        </mat-card>
+      </mat-grid-tile>
+
+
+      <mat-grid-tile colspan="1">
+        <mat-card class="feed-card">
+          <img mat-card-image src="http://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            </p>
+          </mat-card-content>
+          <hr>
+          <div style="    height: 30px; margin: 14px 0 14px 0;     color: #888888; font-size: 14px;">
+            <div class="footer-left-side trending-content" style="width: 70%; float: left;">
+              <mat-icon class="md-24" aria-label="thunder icon">flash_on</mat-icon>
+              <span>Trending</span>
+            </div>
+            <div class="user-actions" style="float: right;max-width: 105px;">
+              <a>
+                <mat-icon class="md-24" aria-label="heart icon">thumb_up</mat-icon>
+                <span class="like-action-number">5</span>
+              </a>
+              <a>
+                <mat-icon class="md-24" aria-label="plus icon">add_circle_outline</mat-icon>
+              </a>
+            </div>
+          </div>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1">
+        <mat-card class="feed-card">
+          <img mat-card-image src="http://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            </p>
+          </mat-card-content>
+          <hr>
+          <div style="    height: 30px; margin: 14px 0 14px 0;     color: #888888; font-size: 14px;">
+            <div class="footer-left-side trending-content" style="width: 70%; float: left;">
+              <mat-icon class="md-24" aria-label="thunder icon">flash_on</mat-icon>
+              <span>Trending</span>
+            </div>
+            <div class="user-actions" style="float: right;max-width: 105px;">
+              <a>
+                <mat-icon class="md-24" aria-label="heart icon">thumb_up</mat-icon>
+                <span class="like-action-number">5</span>
+              </a>
+              <a>
+                <mat-icon class="md-24" aria-label="plus icon">add_circle_outline</mat-icon>
+              </a>
+            </div>
+          </div>
+        </mat-card>
+      </mat-grid-tile> -->
+    </mat-grid-list>
+  </div>
+</div>

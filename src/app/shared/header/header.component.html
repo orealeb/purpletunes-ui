@@ -1,0 +1,51 @@
+<header>
+    <mat-toolbar class="custom-toolbar">
+        <div class="wrapper mat-typography">
+
+            <mat-grid-list cols="10">
+                <mat-grid-tile colspan="4">
+                    <div class="toolbar-tabs">
+                        <a mat-button routerLink="/">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            <span>Home</span>
+                        </a>
+                        <!-- <a mat-button routerLink="/featured">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <span>Featured</span>
+                        </a>
+                        <a mat-button routerLink="/playlisting">
+                            <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                            <span>Playlisting</span>
+                        </a> -->
+                        <a mat-button routerLink="/about">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            <span>About</span>
+                        </a> 
+                    </div>
+                </mat-grid-tile>
+
+                <mat-grid-tile colspan="2">
+                    <div style="margin-top: 5%;">
+                        <mat-icon class="md-24" aria-label="star icon">star</mat-icon>
+                    </div>
+                </mat-grid-tile>
+
+                <mat-grid-tile colspan="4">
+                    <mat-form-field style="margin-right: 10px;margin-top: 15px;">
+                        <input matInput placeholder="&nbsp;Search">
+                        <span matPrefix><i class="fa fa-search" aria-hidden="true"></i></span>
+                    </mat-form-field>
+                    <!-- <div class="button-row">
+                        <button mat-raised-button style="font-size: 12px;" (click)="openDialog()">Login</button>
+                        <button mat-raised-button color="primary" style="font-size: 12px;" (click)="openDialog()">Sign up</button>
+                    </div> -->
+                </mat-grid-tile>
+
+            </mat-grid-list>
+
+        </div>
+    </mat-toolbar>
+    <div class="toolbar-bottom-space">
+    </div>
+</header>
+<router-outlet></router-outlet>

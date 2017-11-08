@@ -1,0 +1,126 @@
+h1 {
+  font-size: 1.2em;
+  color: #999;
+  margin-bottom: 0;
+}
+h2 {
+  font-size: 2em;
+  margin-top: 0;
+  padding-top: 0;
+}
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+nav a:visited, a:link {
+  color: #607D8B;
+}
+
+.music-link{
+    position: absolute;
+    background-color: aliceblue;
+    top: 0;
+    right: 0;
+    font-size: 16px;
+    z-index: 5;
+    height: 37px;
+}
+
+.bottom-card-div{
+    height: 30px;
+    bottom: 0;
+    position: absolute;
+    margin: 14px 0 14px 0;
+    color: #888888;
+    font-size: 14px;
+    display: block;
+    width: 230px;
+    margin-bottom: 7% !important;
+}
+
+.custom-toolbar{
+    background-color: rgba(255,255,255,0.99);
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+    box-shadow: 0px 3px 8px -4px rgba(0,0,0,0.15);
+    height: 68px;
+    position: fixed;
+    top: 0;
+    z-index: 2000;
+    color: #adadad;
+}
+
+.custom-form {
+    font-size: 100%;
+    line-height: 1.125;
+}
+
+.toolbar-bottom-space{
+  height: 70px;
+}
+
+div.background-image{
+   content:url(http://placehold.it/350x150);
+    width: 100%;
+    height: 170px;
+}
+
+.wrapper {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1280px;
+    min-width: 310px;
+    padding: 0 20px;
+    position: relative;
+    width: 100%;
+}
+
+.card-row{
+      margin-top: 1%;
+}
+
+.feed-card:hover {
+    box-shadow: 0 22px 43px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 22px 43px rgba(0,0,0,0.15);
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+    -moz-transform: none;
+}
+
+.feed-card{
+    cursor: pointer;
+    height: 350px;
+    margin: 4% 4% 0 0;
+    width: 300px;
+    background-color: white;
+    box-shadow: 0px 3px 8px -4px rgba(0,0,0,0.15);
+}
+
+.pageTabs{
+    display: block;
+    margin: 0;
+    transition: all 0.2s ease-in-out;
+    font-weight: 300;
+    margin: 12px 0;
+}
+
+.page-section-tab{
+    padding: 0 10px;
+    font-size: 18px;
+    color: #999999;
+    //cursor: pointer;
+    display: inline-block;
+    white-space: nowrap;
+    height: 25px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.2s ease-in-out;
+    .active{
+            color: #525252;
+    }
+}
+
+

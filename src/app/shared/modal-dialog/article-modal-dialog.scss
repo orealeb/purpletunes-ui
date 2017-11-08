@@ -1,0 +1,159 @@
+.modal-song-title{
+    color: #525252;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 42px;
+    max-height: 84px;
+    overflow: hidden;
+   // margin: 20px 0 0;
+    transition: all 0.2s ease-in-out;
+}
+.article-info{
+    // width: 50%;
+    display: inline-block;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 100%;
+    font-size: 1rem;
+    box-sizing: border-box;
+    position: relative;
+    vertical-align: top;
+    text-align: left;
+}
+
+.article-modal-buttons{
+    margin-top: 38px;
+    margin-bottom: 48px;
+    position: relative;
+}
+
+.social-bar.details-social-bar {
+    max-height: 144px;
+    max-width: 336px;
+    overflow: hidden;
+}
+.social-bar {
+    font-size: 0;
+    position: relative;
+    width: 100%;
+}
+
+.social-bar .avatar {
+    background-color: #ebebeb;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-size: cover;
+    border: none;
+    display: inline-block;
+    font-size: 0;
+    height: 48px;
+    width: 48px;
+    position: relative;
+    -webkit-transition: margin-left 0.1s ease-out;
+    transition: margin-left 0.1s ease-out;
+}
+
+.social-bar.details-social-bar .recommendation-number {
+    color: gray;
+    font-weight: 500;
+    -moz-osx-font-smoothing: initial;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-align: center;
+    padding: 0;
+    width: 48px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.social-bar .recommendation-number {
+    color: #cccccc;
+    color: #c9cc00;
+    color: #999999;
+    color: #969900;
+    height: 48px;
+    font-size: 15px;
+    line-height: 48px;
+    font-weight: 500;
+    -moz-osx-font-smoothing: initial;
+    -webkit-font-smoothing: subpixel-antialiased;
+    min-width: 20px;
+    padding: 0 16px 0 32px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    text-decoration: none;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+    opacity: .6;
+}
+
+.ProductDetails-actionsContainer{
+    width: 100%;
+    bottom: 8px;
+    position: absolute;
+    padding-right: 10%;
+    padding-left: 18%;
+    box-sizing: border-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    display: -webkit-flex;
+    -ms-flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.social-actions-alignment {
+    position: absolute;
+    bottom: 48px;
+    width: 100%;
+    padding-right: 100px;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: bottom 0.2s ease-in-out;
+    transition: bottom 0.2s ease-in-out;
+}
+
+.social-actions-container {
+    width: 100%;
+}
+
+.social-actions-container .social-networks {
+    border-right: 2px solid #f2f2f2;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 16px;
+}
+
+.product-detail-page .comment-anchor-link {
+    cursor: pointer;
+}
+.comment-anchor-link {
+    display: inline-block;
+    height: 48px;
+    padding-left: 13px;
+    vertical-align: top;
+    opacity: .3;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.comment-anchor-link .comment-message {
+    display: inline-block;
+    color: black;
+    font-weight: 500;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: top;
+    margin: 13px 0;
+}
+
