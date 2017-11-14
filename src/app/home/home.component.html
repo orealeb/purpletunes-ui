@@ -2,7 +2,12 @@
   <div id="header-wrapper">
     <div class="tm-menu">
       <div class="row menu-wrap">
-        <div class="menu no-items section" id="menu" name="Main Menu">
+        <div class="menu section mycustom-menu-margin" id="menu" name="Main Menu">
+          <div class="widget LinkList" data-version="1" id="LinkList210" style="display:block!important;">
+            <ul id="nav1">
+              <li><a href="http://www.purple-tunes.com/">Home</a></li>
+              <li><a href="http://playlist.purple-tunes.com">Promote</a></li>
+            </ul><select class="selectnav" id="selectnav1"><option value="">Menu</option><option value="http://www.purple-tunes.com/">Home</option><option value="http://playlist.purple-tunes.com/" selected="">Playlist</option></select></div>
         </div>
         <div class="top-bar-social blue section" id="header social widget" name="Top Social Widget">
           <div class="widget LinkList" data-version="1" id="LinkList230">
@@ -54,19 +59,19 @@
         <label class="sr-only" for="inlineFormInput">Email</label>
         <div class="form-group input-group mb-2 mr-sm-2 mb-sm-0">
           <input type="text" class="form-control" id="inlineFormInput" [(ngModel)]="submission.email" placeholder="Your Email" name="email"
-            id="email" >
+            id="email">
         </div>
 
         <label class="sr-only" for="inlineFormInputGroup">Name</label>
         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
           <input type="text" class="form-control" id="inlineFormInputGroup" [(ngModel)]="submission.name" placeholder="Name" name="name"
-            id="name" >
+            id="name">
         </div>
 
         <label class="sr-only" for="inlineFormInputGroup">Url</label>
         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
           <input type="text" class="form-control" id="inlineFormInputGroup" [(ngModel)]="submission.url" placeholder="Video/Audio Url"
-            name="url" id="url" >
+            name="url" id="url">
         </div>
         <button type="submit" class="btn btn-primary" (click)="submitButton();">Submit</button>
       </form>
@@ -135,4 +140,30 @@
     <!-- <pre *ngIf="config.paging" class="card card-block card-header">Page: {{page}} / {{numPages}}</pre> -->
   </div>
 
+  <div id="jugas_footer" style="    padding-bottom: 46px;">
+    <div class="copy-container row">
+      <div class="foot-social"  style="margin: 0 auto;overflow: hidden;">
+        <div class="foot-bar-social blue section" id="Footer social widget" name="Footer Social Widget">
+          <div class="widget LinkList" data-version="1" id="LinkList250">
+            <div class="widget-content">
+              <ul id="social">
+                <li><a class="facebook" href="https://facebook.com/purpletunes/" title="facebook"></a></li>
+                <li><a class="twitter" href="https://twitter.com/purpletunes_" title="twitter"></a></li>
+                <li><a class="soundcloud" href="https://soundcloud.com/purple_tunes" title="soundcloud"></a></li>
+                <li><a class="youtube" href="https://www.youtube.com/afrotraptunes" title="youtube"></a></li>
+                <li><a class="instagram" href="https://instagram.com/purpletunes/" title="instagram"></a></li>
+                <li><a class="gplus" href="https://plus.google.com/u/4/102379974944875212494" title="gplus"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="clear:both"></div>
+      <div class="jugas_footer_copyright" style="position: absolute; z-index: -1001;">
+        By <a href="http://www.soratemplates.com/" id="mycontent" rel="dofollow" style="display: inline-block!important; font-size: inherit!important; color: #fff!important; visibility: visible!important; opacity: 1!important;"
+          title="Free Blogger Templates">Sora Templates</a> | Distributed By <a href="https://gooyaabitemplates.com/" rel="dofollow"
+          target="_blank">Purple Tunes</a>
+      </div>
+    </div>
+  </div>
 </div>

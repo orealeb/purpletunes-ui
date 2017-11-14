@@ -4,5 +4,7 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  environmentName: 'Development',
+  purpleTunesApiBaseUrl: 'https://purpletunes-api.herokuapp.com/v1', //'http://localhost:1337/v1'
 };
