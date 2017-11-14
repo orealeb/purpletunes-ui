@@ -11,5 +11,5 @@ export const PLAYLISTS: Playlist[] = [
   { id: 8, name: 'Afrobeats360', platform: 'SoundCloud', numOfFollowers: '35,545', cost: '45', acceptanceRate: '45', rating: 2},
   { id: 9, name: 'Afrobeats360', platform: 'SoundCloud', numOfFollowers: '35,545', cost: '45', acceptanceRate: '45', rating: 3},
   { id: 10, name: 'Afrobeats360', platform: 'SoundCloud', numOfFollowers: '35,545', cost: '45', acceptanceRate: '45', rating: 4},
-  { id: 4, name: 'Purple Tunes', platform: 'YouTube', numOfFollowers: '35,545', cost: '45', acceptanceRate: '45', rating: 4},
+  { id: 11, name: 'Purple Tunes', platform: 'YouTube', numOfFollowers: '35,545', cost: '45', acceptanceRate: '45', rating: 4},
 ];

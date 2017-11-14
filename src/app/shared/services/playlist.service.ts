@@ -24,7 +24,7 @@ export class PlaylistService {
     const headers = new Headers({ 'Content-Type': 'application/json' });
     const options = new RequestOptions({ headers: headers, withCredentials: false }); //changed with credentials
 
-    return this._http.post('http://purpletunes-api/v1/playlistFormSubmission/', body, options)
+    return this._http.post('https://purpletunes-api/v1/playlistFormSubmission/', body, options)
       .map((res: Response) => <any>res.json())
       .catch(this.handleError);
   }
