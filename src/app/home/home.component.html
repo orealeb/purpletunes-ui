@@ -1,142 +1,138 @@
-<div>
-  <div flex class="wrapper">
-    <mat-toolbar style="margin-left: 9%;">
-      <div class="pageTabs">
-      <a class="page-section-tab" routerLink="/trending"> Trending</a>
-      <a class="page-section-tab" routerLink="/new"> New</a>
-      <a class="page-section-tab" routerLink="/mostpopular"> Most Popular</a>
+<div id="outer-wrapper" class="index home">
+  <div id="header-wrapper">
+    <div class="tm-menu">
+      <div class="row menu-wrap">
+        <div class="menu no-items section" id="menu" name="Main Menu">
+        </div>
+        <div class="top-bar-social blue section" id="header social widget" name="Top Social Widget">
+          <div class="widget LinkList" data-version="1" id="LinkList230">
+            <div class="widget-content">
+              <ul id="social">
+                <li><a class="facebook" href="https://facebook.com/purpletunes/" title="facebook"></a></li>
+                <li><a class="twitter" href="https://twitter.com/purpletunes_" title="twitter"></a></li>
+                <li><a class="soundcloud" href="https://soundcloud.com/purple_tunes" title="soundcloud"></a></li>
+                <li><a class="youtube" href="https://www.youtube.com/afrotraptunes" title="youtube"></a></li>
+                <li><a class="instagram" href="https://instagram.com/purpletunes/" title="instagram"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-    </mat-toolbar>
+    </div>
+    <div style="clear: both;"></div>
+    <div class="header section" id="header" name="Logo &amp; Title">
+      <div class="widget Header" data-version="1" id="Header1">
+        <div id="header-inner">
+          <div class="titlewrapper">
+            <h1 class="title">
+              Purple Tunes
+            </h1>
+          </div>
+          <div class="descriptionwrapper">
+            <p class="description"><span>Afrobeats and Grime! Purple Tunes presents the latest African Music!</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="clear: both;"></div>
   </div>
 
-  <div class="wrapper" flex style="margin-top:-3%; width:70% !important;">
-    <mat-grid-list cols="3" class="card-row" rowHeight="350">
-      <mat-grid-tile colspan="1" *ngFor="let article of articles" >
-        <mat-card class="feed-card" style="max-height:230px !important; max-width:230px !important;" (click)="openDialog()">
-          <div style="position:relative;" style="width:230px !important;">
-            <img mat-card-image src="{{article.image}}" alt="Photo of a Shiba Inu">
-            <div class="music-link">
-              <div style="margin-top:15%;">
-                <a href="LINK">
-                  <i class="fa fa-spotify" aria-hidden="true"></i>
-                </a>
-                <a href="LINK">
-                  <i class="fa fa-soundcloud" aria-hidden="true"></i>
-                </a>
-                <a href="LINK">
-                  <i class="fa fa-download" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <mat-card-content>
-            <p>
-              {{article.title}}
-            </p>
-          </mat-card-content>
-          <div class="bottom-card-div" style="font-size:13px;">
-            <hr>
-            <div class="footer-left-side trending-content" style="width: 70%; float: left;">
-              <i class="fa fa-bolt" aria-hidden="true"></i>
-              <span>Trending</span>
-            </div>
-            <div class="user-actions" style="float: right;max-width: 105px;">
-              <a>
-                <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                <span class="like-action-number">5</span>
-              </a>
-              <a>
-                <i class="fa fa-plus-circle" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </mat-card>
-      </mat-grid-tile>
+  <div class="container-fluid">
+    <ngb-alert *ngIf="successMessage" type="success" (close)="successMessage = null">{{ successMessage }}</ngb-alert>
+    <ngb-alert *ngIf="errorMessage" type="danger" (close)="closeAlert()">{{ errorMessage }}</ngb-alert>
 
-      <!-- <mat-grid-tile colspan="1">
-        <mat-card class="feed-card">
-          <div style="position:relative;" style="width:300px !important;">  
+    <!-- <div class="row" style="    width: 100%;">
+        <div class="col-md-8 mx-auto" >
+          <input *ngIf="config.filtering" placeholder="Filter all columns" [ngTableFiltering]="config.filtering" class="form-control"
+            (tableChanged)="onChangeTable(config)" />
+        </div>
+      </div>
+      <br> -->
+    <div class="row" style="width: 100%; margin-bottom: 10px; padding-left: 100px;">
+      <div class="col-md-2"></div>
+      <form class="form-inline">
+        <label class="sr-only" for="inlineFormInput">Email</label>
+        <div class="form-group input-group mb-2 mr-sm-2 mb-sm-0">
+          <input type="text" class="form-control" id="inlineFormInput" [(ngModel)]="submission.email" placeholder="Your Email" name="email"
+            id="email" >
+        </div>
 
-          <img mat-card-image src="http://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-             <div class="music-link"><a href="LINK" ><? echo $title ?></a></div>
-          </div>
-          <mat-card-content>
-            <p>
-              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            </p>
-          </mat-card-content>
-          <hr>
-          <div style="    height: 30px; margin: 14px 0 14px 0;     color: #888888; font-size: 14px;">
-            <div class="footer-left-side trending-content" style="width: 70%; float: left;">
-              <mat-icon class="md-24" aria-label="thunder icon">flash_on</mat-icon>
-              <span>Trending</span>
-            </div>
-            <div class="user-actions" style="float: right;max-width: 105px;">
-              <a>
-                <mat-icon class="md-24" aria-label="heart icon">thumb_up</mat-icon>
-                <span class="like-action-number">5</span>
-              </a>
-              <a>
-                <mat-icon class="md-24" aria-label="plus icon">add_circle_outline</mat-icon>
-              </a>
-            </div>
-          </div>
-        </mat-card>
-      </mat-grid-tile>
+        <label class="sr-only" for="inlineFormInputGroup">Name</label>
+        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+          <input type="text" class="form-control" id="inlineFormInputGroup" [(ngModel)]="submission.name" placeholder="Name" name="name"
+            id="name" >
+        </div>
 
+        <label class="sr-only" for="inlineFormInputGroup">Url</label>
+        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+          <input type="text" class="form-control" id="inlineFormInputGroup" [(ngModel)]="submission.url" placeholder="Video/Audio Url"
+            name="url" id="url" >
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="submitButton();">Submit</button>
+      </form>
+    </div>
+    <div class="row" style="width: 100%;margin: 0;text-align: center; ">
+      <span class="col-md-12 mx-auto">Select All Playlists Below </span>
+    </div>
 
-      <mat-grid-tile colspan="1">
-        <mat-card class="feed-card">
-          <img mat-card-image src="http://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-          <mat-card-content>
-            <p>
-              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            </p>
-          </mat-card-content>
-          <hr>
-          <div style="    height: 30px; margin: 14px 0 14px 0;     color: #888888; font-size: 14px;">
-            <div class="footer-left-side trending-content" style="width: 70%; float: left;">
-              <mat-icon class="md-24" aria-label="thunder icon">flash_on</mat-icon>
-              <span>Trending</span>
-            </div>
-            <div class="user-actions" style="float: right;max-width: 105px;">
-              <a>
-                <mat-icon class="md-24" aria-label="heart icon">thumb_up</mat-icon>
-                <span class="like-action-number">5</span>
-              </a>
-              <a>
-                <mat-icon class="md-24" aria-label="plus icon">add_circle_outline</mat-icon>
-              </a>
-            </div>
-          </div>
-        </mat-card>
-      </mat-grid-tile>
-      <mat-grid-tile colspan="1">
-        <mat-card class="feed-card">
-          <img mat-card-image src="http://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-          <mat-card-content>
-            <p>
-              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            </p>
-          </mat-card-content>
-          <hr>
-          <div style="    height: 30px; margin: 14px 0 14px 0;     color: #888888; font-size: 14px;">
-            <div class="footer-left-side trending-content" style="width: 70%; float: left;">
-              <mat-icon class="md-24" aria-label="thunder icon">flash_on</mat-icon>
-              <span>Trending</span>
-            </div>
-            <div class="user-actions" style="float: right;max-width: 105px;">
-              <a>
-                <mat-icon class="md-24" aria-label="heart icon">thumb_up</mat-icon>
-                <span class="like-action-number">5</span>
-              </a>
-              <a>
-                <mat-icon class="md-24" aria-label="plus icon">add_circle_outline</mat-icon>
-              </a>
-            </div>
-          </div>
-        </mat-card>
-      </mat-grid-tile> -->
-    </mat-grid-list>
+    <div class="row" style="margin-top:10px; width: 100%;">
+      <div class="col-md-7 mx-auto">
+        <table class="table table-hover table-striped table-sortable">
+          <thead>
+            <tr>
+              <th>
+              </th>
+              <th>
+                Name
+              </th>
+              <th>
+                Platform
+              </th>
+              <th>
+                Number of Followers
+              </th>
+              <th>
+                Cost
+              </th>
+              <th>
+                Acceptance Rate
+              </th>
+              <th>
+                Rating
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of data">
+              <td><input type="checkbox" [checked]="item.selected" (change)="item.selected = !item.selected" /></td>
+              <td>{{item.name}}</td>
+              <td>{{item.platform}}</td>
+              <td>{{item.numOfFollowers}}</td>
+              <td>${{item.cost}}</td>
+              <td>{{item.acceptanceRate}}%</td>
+              <td>
+                <ngb-rating [(rate)]="item.rating"></ngb-rating>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- <ng2-smart-table [settings]="settings" [source]="data"></ng2-smart-table> -->
+        <!-- <ng-table  id="resultDataTable" [config]="config" (tableChanged)="onChangeTable(config)" (cellClicked)="onCellClick($event)" [rows]="rows" [columns]="columns">
+        </ng-table> -->
+      </div>
+    </div>
+    <!-- <pagination *ngIf="config.paging"
+            class="pagination-sm"
+            [(ngModel)]="page"
+            [totalItems]="length"
+            [itemsPerPage]="itemsPerPage"
+            [maxSize]="maxSize"
+            [boundaryLinks]="true"
+            [rotate]="false"
+            (pageChanged)="onChangeTable(config, $event)"
+            (numPages)="numPages = $event">
+</pagination> -->
+    <!-- <pre *ngIf="config.paging" class="card card-block card-header">Page: {{page}} / {{numPages}}</pre> -->
   </div>
+
 </div>

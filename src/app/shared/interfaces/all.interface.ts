@@ -15,6 +15,23 @@ export interface Article {
   image?: string;
 };
 
+export interface Playlist {
+  id: number;
+  name: string;
+  platform: string;
+  numOfFollowers: string;
+  cost: string;
+  acceptanceRate: string;
+  rating: number;
+};
+
+export interface Submission {
+    name: string,
+    email: string,
+    url: string,
+    playlists: Playlist[]
+}
+
 // export interface  Artist {
 //   id: number;
 //   name: string;

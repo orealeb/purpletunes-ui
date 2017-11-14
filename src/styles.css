@@ -7,3 +7,13 @@ html {
     background-color: rgb(242, 242, 242);
 }
 
+body {
+    color: #2e2e2e;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 21px;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+}
