@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
 
     private playlists: Playlist[] = [];
 
-    private submission: Submission = { name: '', email: '', url: '', playlists: [] };
+    submission: Submission = { name: '', email: '', url: '', playlists: [] };
 
     constructor(private playlistService: PlaylistService, public dialog: MatDialog, config: NgbRatingConfig) {
         // customize default values of ratings used by this component tree
@@ -76,7 +76,7 @@ export class HomeComponent implements OnInit {
     successMessage: string;
     errorMessage: string;
 
-    private data: Array<any> = PLAYLISTS;
+    data: Array<any> = PLAYLISTS;
 
     private settings = {
         columns: {
