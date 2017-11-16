@@ -120,7 +120,7 @@
               <td>{{item.name}}</td>
               <td>{{item.platform}}</td>
               <td>{{item.numOfFollowers}}</td>
-              <td>${{item.cost}}</td>
+              <td> <span *ngIf="item.cost !== 'Free'">$</span>{{item.cost}}</td>
               <td>{{item.acceptanceRate}}%</td>
               <td>
                 <ngb-rating [(rate)]="item.rating"></ngb-rating>
